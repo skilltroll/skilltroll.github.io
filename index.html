@@ -36,6 +36,7 @@
             transition: all ease-in-out 0.5s;
             background-color: #f5f3f2;
             overflow: hidden;
+      
         }
         .card:hover
         {
@@ -99,6 +100,8 @@
             margin: 15px;
             background-color: #f5f3f2;
             justify-content: center;
+            transition: all ease-in-out 0.5s;
+
          }
          .open-nav-btn:hover{
            background-color: rgb(92, 156, 253);
@@ -137,7 +140,7 @@
             top: 100px;
             left: 200px;
             padding: 100px;
-
+            transition: all ease-in-out 0.5s;
         }
         .text-sec h1 
         {
@@ -189,13 +192,13 @@
             width: 300px;
             height: 260px;
             border-radius: 10px;
-            background-color: rgba(214, 211, 211, 0.816);
+            background-color: rgba(214, 211, 211, 0.816) ;
             overflow: hidden;
             margin-left: 20px;
             transition: all ease-in-out 0.5s;
-
-            
-            
+            margin-right: 20px;
+            cursor: pointer;
+          
         }
         .cards img 
         {
@@ -234,6 +237,63 @@
             position: relative;
             left: 50%;
         }
+        @media screen and (max-width: 892px) 
+        {
+            .text-sec
+            {
+                left: 50px;
+                transition: all ease-in-out 0.5s;
+            }
+           
+        }
+        @media screen and (max-width: 592px)
+        {
+            .text-sec
+            {
+                left: 10px;
+                transition: all ease-in-out 0.5s;
+            }
+            
+            .cards 
+            {
+                height: 180px;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .cards:hover
+            {
+                height: 190px;
+                margin-left: 10px;
+            }
+            .cards h1
+            {
+                font-size: 12px;
+            }
+            .cards p
+            {
+                font-size: 10px;
+            }
+            
+        }
+        #logo
+        {
+            width: 90px;
+            height: 90px;
+            position: relative;
+            padding: 0px;
+            float: right;
+            bottom: 95px;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        #logo img
+        {
+            width: 100%;
+            height: 100%;
+            background-image: cover; 
+            position: relative;
+            cursor: pointer;
+        }
     </style>
     
     <title>Document</title>
@@ -241,23 +301,20 @@
 <body onload="startTime()">
     <aside id="aside">
     <div class="side-nav" id="side-nav">
-        <div class="card" >
-             <a href=""><i class="fa-solid fa-address-card"></i> About</a>
+        <div class="card" onclick="window.open('https://itskilltroll.wordpress.com/#About')">
+             <a><i class="fa-solid fa-address-card"></i> About</a>
         </div>
-        <div class="card" >
-             <a href=""><i class="fa-brands fa-servicestack"></i> Services</a>
-        </div>
-        <div class="card" >
+        <div class="card" onclick="location.href='tel:+9647829053244'" >
              <a href=""><i class="fa-solid fa-phone"></i> Call Me</a>
         </div>
-        <div class="card" >
-             <a href=""><i class="fa-solid fa-gauge"></i> DashBoard</a>
+        <div class="card" onclick="location.href='https://www.whoismrrobot.com/endgame/'">
+             <a><i class="fa-solid fa-chess"></i> Play Games</a>
         </div>
-        <div class="card" >
-            <a href=""><i class="fa-solid fa-address-book"></i> Contact</a>
+        <div class="card" onclick="location.href='mailto:omara9074@gmail.com'" >
+            <a><i class="fa-solid fa-at"></i> Contact</a>
         </div>
-        <div class="card" >
-            <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <div class="card" onclick="location.href='https://www.instagram.com/itskilltroll/' ">
+            <a><i class="fa-brands fa-instagram"></i> Instagram</a>
         </div>
         <div class="icon">
         <div class="close-nav-btn" onclick="closeNav()">
@@ -272,26 +329,27 @@
             <i class="fa-solid fa-bars" style="color:black;"></i>
         </div>
         <div id="txt"></div>
+        <div id="logo"> <img src="itskilltroll.png" alt=""></div>
         <div class="text-sec">
             <h1>itskilltroll is back babyy !</h1>
             <p>We take developing to the next level bois :D</p>
-            <button class="btn">Read more</button>
+            <button class="btn" onclick="location.href='https://itskilltroll.wordpress.com'">Read more</button>
         </div>
         <div class="content">
-            <div class="cards">  
+            <div class="cards" onclick="window.open('https://itskilltroll.wordpress.com/#kali')">  
                 <img src="build-beginner-hacking-kit-with-raspberry-pi-3-model-b.1280x600.jpg" alt="">
                 <h1>Kali on raspberry pi</h1>
                 <p> Penetration testing with RPI4 is taking to the next level , small and powerfull device</p>
             </div>
-            <div class="cards">  
+            <div class="cards" onclick="window.open('https://itskilltroll.wordpress.com/#BTD')">  
                 <img src="WhatsApp Image 2022-04-05 at 11.19.32 PM.jpeg" alt="">
                 <h1>Brain tumor detection</h1>
-                <p>Using Alexnet, where we collected 200 samples of normal and abnormal</p>
+                <p>Using Alexnet, where we collected 200 samples of normal and abnormal cases</p>
             </div>
-            <div class="cards">  
+            <div class="cards" onclick="window.open('https://itskilltroll.wordpress.com/#FPSGame')">  
                 <img src="1_B_UhjuqKm-IzXKYebJmIPA.png" alt="">
                 <h1>Game developing</h1>
-                <p> Developing FPS and 2d aames with Unity engin</p>
+                <p> Developing FPS and 2d games with Unity engin</p>
             </div>
         </div>
     </section>
