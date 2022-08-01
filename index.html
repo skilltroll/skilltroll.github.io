@@ -244,21 +244,37 @@
                 left: 50px;
                 transition: all ease-in-out 0.5s;
             }
+            .cards
+            {
+                height: 260px;
+            }
            
         }
-        @media screen and (max-width: 592px)
+        @media screen and (max-width: 554px)
         {
             .text-sec
             {
-                left: 10px;
+                position: relative;
+                width: 100%;
+                left:-30px;
+                top: -90px;
+                margin-bottom: 50px;
                 transition: all ease-in-out 0.5s;
+                text-align: left;
+            }
+            .text-sec h1
+            {
+                font-size: large;
+               
             }
             
             .cards 
             {
-                height: 180px;
+                height: 230px;
                 margin-left: 5px;
                 margin-right: 5px;
+                margin-bottom: 30px;
+                
             }
             .cards:hover
             {
@@ -273,8 +289,48 @@
             {
                 font-size: 10px;
             }
-            
+            .content
+            {
+                flex-direction: row;
+                flex-wrap: wrap;
+                height: 120%;
+                margin-top: 0;
+                margin-bottom: 20px;
+                overflow: hidden;
+            }
+           
         }
+        @media screen and (max-width: 392px)
+            {
+                .text-sec
+                {
+                    left: 10px;
+                    top: -70px;
+                    width: 80%;
+                    margin: 40px;
+                    padding:0;
+                    margin-left: 10px;
+                    
+                }
+                .text-sec h1
+                {   
+                    font-size: large;
+                    bottom: 0px;
+                    padding:0;
+                    margin:0;
+                }
+                .text-sec p
+                {
+                    font-size: small;
+                    padding: 0;
+                    margin: 5px;
+                }
+                .text-sec button 
+                {
+                    font-size: small;
+                }
+               
+            }
         #logo
         {
             width: 90px;
