@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome.min.css">
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        
+        .side-nav
+        {
+            position: fixed;
+            background-color: rgba(214, 211, 211, 0.671);
+            height: 100vh;
+            width:0;
+
+        }
+        .card
+        {
+            display: block;
+            margin-top: 30px;
+            margin-right: 30px;
+            padding-left: 30px;
+            border: 1px solid #f5f3f2;
+            padding:30px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            cursor: pointer;      
+            transition: all ease-in-out 0.5s;
+            background-color: #f5f3f2;
+            overflow: hidden;
+      
+        }
+        .card:hover
+        {
+            padding-left: 50px;
+            margin-right: 10px;
+            transition: all ease-in-out 0.5s;
+            background-color: rgb(206, 206, 206);
+            border: 1px solid rgb(206, 206, 206);
+            
+        }
+        .card:hover a
+        { 
+        color:rgb(0, 150, 243);
+        transition: all ease-in-out 0.5s;
+        }
+        
+        .card a
+        {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            transition: all ease-in-out 0.5s;
+            font-size: medium;
+            font-family: sans-serif;
+
+        }
+        .card a i{
+            padding-right: 5px;
+            width: auto;
+         }
+         .icon
+         {
+            width: 60%;
+            display: flex;
+           
+            padding: 10px 5px;
+            margin-left: 30px;
+            margin-top: 30px;
+            padding-left: 20px;
+            justify-content: center;
+         }
+         .close-nav-btn{
+            background-color: #f5f3f2;
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition: all ease-in-out 1s;
+
+         }
+         .close-nav-btn:hover{
+            background-color: #f38955;
+            border-radius: 10px;
+            padding: 10px 20px;
+
+
+         }
+         .open-nav-btn{
+            display: flex;
+            border-radius: 10px;
+            padding: 10px;
+            width: 40px;
+            margin: 15px;
+            background-color: #f5f3f2;
+            justify-content: center;
+         }
+         .open-nav-btn:hover{
+           background-color: rgb(92, 156, 253);
+           transition: all ease-in-out 1s;
+
+         }
+       
+         .close-nav-btn i
+         {
+           display: flex;
+           justify-content: center;
+           text-decoration: none;
+           font-size: medium;
+         }
+         .open-nav-btn i
+         {
+           display: flex;
+           justify-content: center;
+           text-decoration: none;
+           font-size: medium;
+         }
+       
+         .right-side-sec
+        {
+            display:block;
+            background-image: url("chicago-city-lights-at-night.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100%;
+            transition: margin-left .5s;
+        }
+        .text-sec
+        {
+            position: relative;
+            top: 100px;
+            left: 200px;
+            padding: 100px;
+
+        }
+        .text-sec h1 
+        {
+            color: #f5f3f2;
+            text-transform: uppercase;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 40px;
+            position: relative;
+            bottom: 45px;
+        }
+        .text-sec p
+        {
+            color: #f5f3f2;
+            font-family: 'Roboto';
+        }
+        .text-sec button
+        {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-family: 'Roboto';
+            border: none;
+            background-color: #f5f3f2;
+            cursor: pointer;
+            transition: all ease-in-out 0.5s;
+
+        }
+        .text-sec button:hover
+        {
+            background-color: rgb(0, 150, 243);
+            color: #f5f3f2;
+            transition: .5s ease-in-out;
+        }
+
+        .content
+        {
+            position: relative;
+            display: flex;
+            justify-content:center ;
+            height:300px ;
+            top: 40px;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+        .cards
+        {
+            display: block;
+            width: 300px;
+            height: 260px;
+            border-radius: 10px;
+            background-color: rgba(214, 211, 211, 0.816);
+            overflow: hidden;
+            margin-left: 20px;
+            transition: all ease-in-out 0.5s;
+
+            
+            
+        }
+        .cards img 
+        {
+            background-size: cover;
+            width: 100%;
+        
+        }
+        .cards p
+        {
+            padding: 5px;
+            font-family: 'Roboto';
+        }
+        .cards h1 
+        {
+            padding-left: 5px;
+            text-transform: uppercase;
+            font-size: medium;
+            font-family: 'Roboto';
+            color:rgb(8, 117, 184) ;
+        }
+
+        .cards:hover{
+            width: 310px;
+            height: 270px;
+            transition: all ease-in-out 0.5s;
+            margin-left: 25px;
+        }
+        #txt
+        {
+            color: white;
+            font-family: 'Roboto';
+            font-size: large;
+            bottom: 45px;
+            width: 100px;
+            display: flex;
+           
+            position: relative;
+            left: 50%;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body onload="startTime()">
+    <aside id="aside">
+    <div class="side-nav" id="side-nav">
+        <div class="card" >
+             <a href=""><i class="fa-solid fa-address-card"></i> About</a>
+        </div>
+        <div class="card" >
+             <a href=""><i class="fa-brands fa-servicestack"></i> Services</a>
+        </div>
+        <div class="card" >
+             <a href=""><i class="fa-solid fa-phone"></i> Call Me</a>
+        </div>
+        <div class="card" >
+             <a href=""><i class="fa-solid fa-gauge"></i> DashBoard</a>
+        </div>
+        <div class="card" >
+            <a href=""><i class="fa-solid fa-address-book"></i> Contact</a>
+        </div>
+        <div class="card" >
+            <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+        </div>
+        <div class="icon">
+        <div class="close-nav-btn" onclick="closeNav()">
+            <i class="fa-solid fa-xmark" style="color:black ;"></i>
+        </div>
+        </div>
+    </div>
+    </aside>
+
+    <section class="right-side-sec" id="sec">
+        <div class="open-nav-btn" onclick="openNav()">
+            <i class="fa-solid fa-bars" style="color:black;"></i>
+        </div>
+        <div id="txt"></div>
+        <div class="text-sec">
+            <h1>itskilltroll is back babyy !</h1>
+            <p>We take developing to the next level bois :D</p>
+            <button class="btn">Read more</button>
+        </div>
+        <div class="content">
+            <div class="cards">  
+                <img src="build-beginner-hacking-kit-with-raspberry-pi-3-model-b.1280x600.jpg" alt="">
+                <h1>Kali on raspberry pi</h1>
+                <p> Penetration testing with RPI4 is taking to the next level , small and powerfull device</p>
+            </div>
+            <div class="cards">  
+                <img src="WhatsApp Image 2022-04-05 at 11.19.32 PM.jpeg" alt="">
+                <h1>Brain tumor detection</h1>
+                <p>Using Alexnet, where we collected 200 samples of normal and abnormal</p>
+            </div>
+            <div class="cards">  
+                <img src="1_B_UhjuqKm-IzXKYebJmIPA.png" alt="">
+                <h1>Game developing</h1>
+                <p> Developing FPS and 2d aames with Unity engin</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+   
+        function openNav() {
+      document.getElementById("side-nav").style.width = "250px";
+      document.getElementById("sec").style.marginLeft = "250px";
+      /* document.body.style.backgroundColor = "rgba(0,0,0,0.8)";*/
+
+                        }
+        function closeNav() {
+      document.getElementById("side-nav").style.width = "0";
+      document.getElementById("sec").style.marginLeft= "0";
+      document.body.style.backgroundColor = "white";
+
+                        }
+        </script>
+    <script>
+        function startTime() {
+          const today = new Date();
+          let h = today.getHours();
+          let m = today.getMinutes();
+          let s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+          setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i;
+        }
+        </script>
+    <script src="https://kit.fontawesome.com/ed510e5ec9.js" crossorigin="anonymous"></script>
+</body>
+</html>
