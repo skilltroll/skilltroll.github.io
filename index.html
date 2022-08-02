@@ -72,9 +72,8 @@
          {
             width: 60%;
             display: flex;
-           
             padding: 10px 5px;
-            margin-left: 30px;
+            margin-left: 100px;
             margin-top: 30px;
             padding-left: 20px;
             justify-content: center;
@@ -83,7 +82,7 @@
             background-color: #f5f3f2;
             border-radius: 10px;
             padding: 10px 20px;
-            transition: all ease-in-out 1s;
+            
 
          }
          .close-nav-btn:hover{
@@ -350,6 +349,11 @@
 <body onload="startTime()">
     <aside id="aside">
     <div class="side-nav" id="side-nav">
+        <div class="icon">
+            <div class="close-nav-btn" onclick="closeNav()">
+                <i class="fa-solid fa-xmark" style="color:black ;"></i>
+            </div>
+            </div>
         <div class="card" onclick="window.open('https://itskilltroll.wordpress.com/#About')">
              <a><i class="fa-solid fa-address-card"></i> About</a>
         </div>
@@ -364,11 +368,6 @@
         </div>
         <div class="card" onclick="location.href='https://www.instagram.com/itskilltroll/' ">
             <a><i class="fa-brands fa-instagram"></i> Instagram</a>
-        </div>
-        <div class="icon">
-        <div class="close-nav-btn" onclick="closeNav()">
-            <i class="fa-solid fa-xmark" style="color:black ;"></i>
-        </div>
         </div>
     </div>
     </aside>
