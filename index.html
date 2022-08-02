@@ -226,17 +226,6 @@
             transition: all ease-in-out 0.5s;
             margin-left: 25px;
         }
-        #txt
-        {
-            color: white;
-            font-family: 'Roboto';
-            font-size: large;
-            bottom: 45px;
-            width: 100px;
-            display: flex;
-            position: relative;
-            left: 50%;
-        }
         @media screen and (max-width: 892px) 
         {
             .text-sec
@@ -384,7 +373,6 @@
         <div class="open-nav-btn" onclick="openNav()">
             <i class="fa-solid fa-bars" style="color:black;"></i>
         </div>
-        <div id="txt"></div>
         <div id="logo"> <img src="itskilltroll.png" alt=""></div>
         <div class="text-sec">
             <h1>itskilltroll is back babyy !</h1>
@@ -425,23 +413,6 @@
       document.body.style.backgroundColor = "white";
 
                         }
-        </script>
-    <script>
-        function startTime() {
-          const today = new Date();
-          let h = today.getHours();
-          let m = today.getMinutes();
-          let s = today.getSeconds();
-          m = checkTime(m);
-          s = checkTime(s);
-          document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
-          setTimeout(startTime, 1000);
-        }
-        
-        function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-          return i;
-        }
         </script>
     <script src="https://kit.fontawesome.com/ed510e5ec9.js" crossorigin="anonymous"></script>
 </body>
