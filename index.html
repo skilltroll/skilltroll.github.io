@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="fontawesome.min.css">
     <link rel="stylesheet" href="all.min.css">
     <title>skilltroll - main</title>
-    
+
     <style>
         *{
             margin: 0;
@@ -15,7 +15,15 @@
             box-sizing: border-box;
             overflow-x: hidden;
         }
-        
+        *::-webkit-scrollbar-thumb
+        {
+         background-color:#21456f;
+         color: #7ebef0;
+        }
+        *::-webkit-scrollbar 
+        {
+         width: 4px;
+        }
         .side-nav
         {
             position: fixed;
@@ -140,7 +148,7 @@
         .text-sec
         {
             position: relative;
-            top: 100px;
+            top: 21px;
             left: 200px;
             padding: 100px;
             transition: all ease-in-out 0.5s;
@@ -185,7 +193,7 @@
             display: flex;
             justify-content:center ;
             height:300px ;
-            top: 40px;
+            top: -20px;
             padding-top: 30px;
             box-sizing: border-box;
         }
@@ -234,17 +242,22 @@
             .right-side-sec
         {
             
-            overflow-y: scroll;
+            overflow-y: hidden;
            
         }
             .text-sec
             {
+                top: -40px;
                 left: 50px;
                 transition: all ease-in-out 0.5s;
             }
-            .cards
+            .cards 
             {
-                height: 260px;
+            height: 237px;
+            }
+            .content
+            {
+                top: -100px;
             }
            
         }
@@ -300,6 +313,11 @@
                 top: -100px;
                 padding: 0px;
             }
+            
+            .right-side-sec 
+                {
+                overflow-y: scroll;
+                }
            
         }
         @media screen and (max-width: 392px)
@@ -336,6 +354,10 @@
                     padding: 15px;
                     margin-top: 15px;
                     
+                }
+                .right-side-sec 
+                {
+                overflow-y: scroll;
                 }
                
                
@@ -435,5 +457,12 @@
                         }
         </script>
     <script src="https://kit.fontawesome.com/ed510e5ec9.js" crossorigin="anonymous"></script>
+    <script>
+         $(document).ready(function () {
+          if (!$.browser.webkit) {
+              $('.wrapper').html('<p>Sorry! Non webkit users. :(</p>');
+          }
+      });
+    </script>
 </body>
 </html>
