@@ -10,8 +10,17 @@
      <script src="https://kit.fontawesome.com/cd16d80964.js" crossorigin="anonymous"></script>
      <?xml-stylesheet type="text/css"?>
      <style>
-      body{background-color:#4A90E2;}
+      body::-webkit-scrollbar-thumb
+      {
+        background-color:#21456f;
+        color: #7ebef0;
+      }
+      body::-webkit-scrollbar 
+      {
+      width: 4px;
+      }
       bodY {
+  background-color:#4A90E2;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -90,30 +99,35 @@
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
 }
+
+
+
       
      </style>
    
 
   </head>
   <body onload="myFunction()" >
-  <div id="loader">
-    <div class="center">
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-    </div>
-  </div>
-<div style="display:none;" id="myDiv" class="animate-bottom">
-  <rssapp-ticker id="itjPNz0jfZd60pOZ"></rssapp-ticker><script src="https://widget.rss.app/v1/ticker.js" type="text/javascript" async></script>
-  <rssapp-imageboard id="QdB4dqbZv2ro6dJ4"></rssapp-imageboard><script src="https://widget.rss.app/v1/imageboard.js" type="text/javascript" async></script>
-<div>
+    
+        <div id="loader">
+          <div class="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div>
+        </div>
+
+        <div style="display:none;" id="myDiv" class="animate-bottom">
+          <rssapp-ticker id="itjPNz0jfZd60pOZ"></rssapp-ticker><script src="https://widget.rss.app/v1/ticker.js" type="text/javascript" async></script>
+          <rssapp-imageboard id="QdB4dqbZv2ro6dJ4"></rssapp-imageboard><script src="https://widget.rss.app/v1/imageboard.js" type="text/javascript" async></script>
+        <div>
   </body>
   <script>
     var myVar;
@@ -126,5 +140,10 @@
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
     }
+    $(document).ready(function () {
+          if (!$.browser.webkit) {
+              $('.wrapper').html('<p>Sorry! Non webkit users. :(</p>');
+          }
+      });
     </script>
 </html>
