@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Easing - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage demo easing effect." />
+	<meta name="keywords"  content="fullpage,jquery,demo,easing,effect,jqueui" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="./about/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="./about/examples.css" />
+	<style>
+		#section1
+		{
+			position: relative;
+			display: flex;
+		}
+		#sec-ttl
+		{
+			font-size: xxx-large;
+			margin-bottom: 20px;
+		}
+		#Projects-ttl
+		{
+			position: absolute;
+			top: 50px;
+			right: 0;
+			left: 0;
+			font-weight: bold;
+			color: #3498DB;
+			font-size: xx-large;
+			
+		}
+		#Projects-nms
+		{
+			position: absolute;
+			top: 100px;
+			right: 0;
+			left: 0;
+			color: #3498DB;
+			font-size: xx-large;
+			
+		}
+		h6, p {
+  font-family: sans-serif;
+}
+
+.c-heroImageGrid {
+	position: relative;
+	overflow: hidden;
+	height: 42vw;
+	background: #fff;
+	margin-top:12%;
+}
+
+.c-heroImageGrid .container {
+	display: flex;
+	align-items: flex-end;
+	position: absolute;
+	top: -20vw;
+	left: -8vw;
+	transform: rotateZ(45deg);
+	height: 100vw;
+	width: 107vw;
+}
+
+.c-heroImageGrid .container .column {
+	overflow: hidden;
+	position: relative;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(1) {
+	border-right: 8px solid #fff;
+	width: 25%;
+	height: 66vw;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(1):hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(1):before {
+	position: absolute;
+	top: 8.4vw;
+	left: 8.1vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: rotateZ(-45deg);
+	content: "";
+	width: 37vw;
+	height: 38vw;
+	background-image: url('./about/btd/BTD\ \(1\).webp');
+}
+
+
+.c-heroImageGrid .container .column:nth-of-type(2) {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 75%;
+	height: 109.1vw;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row {
+	border-top: 8px solid #fff;
+}
+
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1) {
+	position: relative;
+	overflow: hidden;
+	height: 50vw;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1):hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(1):before {
+	position: absolute;
+	top: -10.1vw;
+	left: -14.3vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: rotateZ(-45deg);
+	content: "";
+	width: 65vw;
+	height: 39vw;
+	background-image: url('./about/btd/BTD\ \(2\).webp');
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) {
+	display: flex;
+	height: 40.5vw;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+	border-top: none;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) {
+	overflow: hidden;
+	width: 30%;
+	background-color: #232b34;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+	transform: rotateZ(-45deg);
+	position: relative;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text h6 {
+	position: absolute;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.35vw;
+	width: 20vw;
+	top: 16vw;
+	left: 7vw;
+	line-height: 1.55vw;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(1) .text p {
+	text-align: right;
+	position: absolute;
+	color: #fff;
+	font-size: 0.9vw;
+	width: 18vw;
+	top: 23.5vw;
+	left: -3.5vw;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2) {
+	position: relative;
+	width: 70%;
+	border-left: 8px solid #fff;
+	overflow: hidden;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2):hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(2) div:nth-of-type(2):before {
+	position: absolute;
+	top: 0;
+	left: -40vw;
+	width: 110.1vw;
+	height: 110vw;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	transform: rotateZ(-40deg);
+	content: "";
+	background-image: url('./about/btd/mri.jpg');
+}
+
+
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3) {
+	position: relative;
+	height: 18.6vw;
+	overflow: hidden;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3):hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+
+.c-heroImageGrid .container .column:nth-of-type(2) .row:nth-of-type(3):before {
+	position: absolute;
+	top: 7.5vw;
+	left: 25vw;
+	width: 33vw;
+	height: 27vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transform: rotateZ(-45deg);
+	content: "";
+	background-image: url('./about/btd/mri2.jpg');
+}
+.scs-img
+{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./about/rl/r&l-sys.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+.scs-img2
+{
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8) ), url('./about/rl/pi.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.container-imgs
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 80vh;
+	bottom: -165px;
+	background-color:#232b34 ;
+	
+	
+}
+.cimg
+{
+	width: 300px;
+	height: 220px;
+	padding: 10px;
+	border-radius: 10%;
+	
+}
+#contacts
+{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: 150px;
+	
+}
+.contact-btn
+{
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	
+
+}
+.contact-btn .img
+{
+ width: 50px;
+}
+#h2-cntct
+{
+	position: absolute;
+	color: #fff;
+	top: 120px;
+	left: 15px;
+	font-size: larger;
+	font-weight: bold;
+}
+
+#luxuryttl
+{
+color: #fff;
+font-weight: 700;
+font-size: large;
+position: absolute;
+bottom: 60%;
+left:15px ;
+
+
+}
+.divcnt
+{
+	width: 50%;
+	justify-content: space-between;
+}
+#luxury
+{
+color: #fff;
+position: absolute;
+width: 50%;
+left: 15px;
+text-align: left;
+}
+
+iframe
+{
+	position: absolute;
+	display:flex ;
+	right: 50px;
+	top: 150px;
+
+}
+#gitttl
+{
+	position: absolute; 
+	right: 50px;top: 300px;
+}
+@media screen and (max-width: 580px)
+{
+	iframe
+{
+	width: 150px;
+	height: 100px;
+
+	
+
+}
+#gitttl
+{
+	
+top: 250px;
+}
+
+}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor=""><a href="index.html">Home</a></li>
+	<li data-menuanchor="firstPage"><a href="#firstPage">About</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Projects</a></li>
+	
+	
+	
+</ul>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<h1 id="sec-ttl">Meet itskilltroll: The Cyber Security Specialist</h1>
+		<p>With a keen eye for detail and a passion for staying ahead of the curve, Skilltroll brings a unique blend of technical expertise and creative problem-solving to every project. From <br> 
+			<span>penetration testing</span> to <span >incident response</span></p>
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1 id="Projects-ttl">My Little Projects</h1>
+			<h1 id="Projects-nms">Brain tumor detection using AlexNet | 2022</h1>
+			<div class="c-heroImageGrid">
+				<div class="container">
+					<div class="column"></div>
+					<div class="column">
+						<div class="row"></div>
+						<div class="row">
+							<div>
+								<div class="text">
+									<h6>
+										AlexNet BTD : Iraq -Duhok
+										
+									</h6>
+									<p>
+										We have used 100 smaples of normal cases and 100 smaples of abnormal cases all samples were collected from iraq – duhok hospitals , <a href="https://github.com/skilltroll/BrainTumorDetectionUsing_AlexNet" style="color: #3498DB;">click to download</a>
+									</p>
+								</div>
+							</div>
+							<div></div>
+						</div>
+						<div class="row"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1  id="Projects-nms">Shopping Cart System – with registration form | 2020</h1>
+			<div class="scs-img">
+				<p>Mysql and php used to create shopping cart system , <a href="https://github.com/skilltroll/Advanced-signin-signout-shoppingcartsystem" style="color: #3498DB;">Click here </a>to download</p>
+
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h1  id="Projects-nms">Kali on Raspberry pi | 2019</h1>
+			<div class="scs-img2">
+				<p>Small mobile penetration testing device based on raspberry pi , Click here to download
+					<a href="https://www.kali.org/get-kali/#kali-arm" style="color: #3498DB;">Click here </a>to download</p>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="intro">
+			<h1  id="Projects-nms">FPS Game | 2018 <br><p style="font-size: large;">A CSGO like shooter game</p>
+			</h1>			
+				<div class="container-imgs">
+					<div class="cimgdiv"> <img class="cimg" src="./about/unity/gm (1).webp" alt=""></div>
+					<div class="cimgdiv"> <img class="cimg" src="./about/unity/gm (2).webp" alt=""></div>
+					<div class="cimgdiv"> <img class="cimg" src="./about/unity/gm (3).webp" alt=""></div>
+					<div class="cimgdiv"> <img class="cimg" src="./about/unity/gm (4).webp" alt=""></div>
+				</div>
+		</div>
+	</div>
+	<div class="section" id="sectionftr">
+		<div class="intro">
+			
+			<h1  id="Projects-nms"></h1>
+			<h2 id="h2-cntct">Contact me at</h2>
+			<div id="contacts">
+				<div class="contact-btn"><img src="./about/logos/Facebook_Logo_(2019).png" alt="" style="width: 50px; cursor: pointer;" onclick="location.href='https://www.facebook.com/itskilltroll/'"></div>
+				<div class="contact-btn"><img src="./about/logos/283-2831746_insta-icon-instagram.png" alt="" style="width: 50px; cursor: pointer;"  onclick="location.href='https://www.Instagram.com/itskilltroll/'"></div>
+				<div class="contact-btn"><img src="./about/logos/GitHub_logo.png" alt=""style="width: 50px;cursor: pointer;" onclick="location.href='https://github.com/skilltroll'"></div>
+			</div>
+			<h3 id="luxuryttl">Get to know luxury diamond </h3><br>
+			<div class="divcnt">
+				<h2 id="luxury">At Luxury Diamond, we offer exquisite diamond jewelry crafted with passion and Our collection includes engagement rings, necklaces, earrings, and more, all designed to embody elegance and timeless style. With a commitment to quality and personalized service, we strive to exceed your expectations. Shop online and explore the allure of Luxury Diamond today.
+				</br>
+				</br>
+					<a href="" style="color: #3498DB;">Click here</a> to visit Luxury Diamond Shop
+				</h2> 
+	
+			</div>
+			<iframe width="250" height="150" src="https://www.youtube.com/embed/BNXVAfDG0RQ" title="uamee - POTATO [HARDBASS]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<h3 id="gitttl">Git Lit With Hardbass</h3>
+			<h5 style="position: absolute; bottom: 4px; left:15px ;">Made by itskilltroll</h5>
+		</div>
+	</div>
+</div>
+
+<!-- You will require to load a JS file defining each of the easings you want to use -->
+<script type="text/javascript" src="./about/easings.js"></script>
+
+<script type="text/javascript" src="./about/fullpage.js"></script>
+<script type="text/javascript" src="./about/examples.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage','5thpage', 'lastPage'],
+        menu: '#menu',
+
+        // `easeInOutBack` is defined in `../vendors/easings.js`
+        easing: 'easeInOutBack',
+        css3: false
+    });
+</script>
+
+</body>
+</html>
